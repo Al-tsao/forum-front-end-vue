@@ -41,7 +41,7 @@
 
       <div class="text-center mb-3">
         <p>
-          <a href="/signup">Sign Up</a>
+          <router-link to="/signup"> Sign Up </router-link>
         </p>
       </div>
 
@@ -59,7 +59,7 @@ export default {
     };
   },
   methods: {
-    handleSubmit(e) {
+    handleSubmit() {
       const data = JSON.stringify({
         email: this.email,
         password: this.password,
