@@ -4,6 +4,7 @@
   <div class="container py-5">
     <NavTabs />
     <!-- 餐廳類別標籤 RestaurantsNavPills -->
+    <RestaurantsNavPills v-bind:categories="categories" />
 
     <div class="row">
       <!-- 餐廳卡片 RestaurantCard-->
@@ -21,6 +22,7 @@
 <script>
 import NavTabs from "./../components/NavTabs";
 import RestaurantCard from "./../components/RestaurantCard";
+import RestaurantsNavPills from "./../components/RestaurantsNavPills";
 
 const dummyData = {
   restaurants: [
@@ -269,10 +271,11 @@ const dummyData = {
   categoryId: "",
 };
 export default {
-  name: "Restaurant",
+  name: "Restaurant" /* 組件命名 */,
   components: {
     NavTabs,
     RestaurantCard,
+    RestaurantsNavPills,
   },
   data() {
     return {
