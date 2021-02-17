@@ -269,6 +269,7 @@ const dummyData = {
   categoryId: "",
 };
 export default {
+  name: "Restaurant",
   components: {
     NavTabs,
     RestaurantCard,

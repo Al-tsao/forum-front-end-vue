@@ -575,6 +575,7 @@ const dummyData = {
 };
 
 export default {
+  name: "RestaurantFeeds" /* 組件命名 */,
   components: {
     NavTabs,
     NewestRestaurants,
