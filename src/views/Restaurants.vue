@@ -279,7 +279,7 @@ const dummyData = {
   categoryId: "",
 };
 export default {
-  name: "Restaurant" /* 組件命名 */,
+  name: "Restaurants" /* 組件命名 */,
   components: {
     NavTabs,
     RestaurantCard,

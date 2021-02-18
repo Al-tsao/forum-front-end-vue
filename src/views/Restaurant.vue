@@ -3,6 +3,7 @@
   <div class="container py-5">
     <h1>餐廳描述頁</h1>
     <!-- 餐廳資訊頁 RestaurantDetail -->
+    <RestaurantDetail v-bind:initial-restaurant="restaurant" />
     <hr />
     <!-- 餐廳評論 RestaurantComments -->
     <!-- 新增評論 CreateComment -->
@@ -11,6 +12,8 @@
 
 // ./src/views/Restaurant.vue
 <script>
+import RestaurantDetail from "./../components/RestaurantDetail";
+
 const dummyData = {
   // 請貼上資料樣本
   restaurant: {
@@ -59,6 +62,10 @@ const dummyData = {
 };
 
 export default {
+  name: "Restaurant" /* 組件命名 */,
+  components: {
+    RestaurantDetail,
+  },
   data() {
     return {
       restaurant: {
