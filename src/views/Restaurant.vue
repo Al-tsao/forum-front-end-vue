@@ -106,6 +106,7 @@ export default {
     };
   },
   created() {
+    console.log(this.$route.params);
     const { id: restaurantId } = this.$route.params;
     this.fetchRestaurant(restaurantId);
   },
