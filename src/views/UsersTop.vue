@@ -7,9 +7,14 @@
     <hr />
     <div class="row text-center">
       <div v-for="user in users" v-bind:key="user.id" class="col-3">
-        <a href="#">
+        <router-link
+          v-bind:to="{
+            name: 'user',
+            params: { id: user.id },
+          }"
+        >
           <img v-bind:src="user.image" width="140px" height="140px" />
-        </a>
+        </router-link>
         <h2>{{ user.name }}</h2>
         <span class="badge badge-secondary"
           >追蹤人數：{{ followerNum(user.Followers) }}</span
@@ -198,6 +203,7 @@ export default {
     fetchUsersTop() {
       const { users } = dummyData;
       this.users = users;
+      console.log(this.users);
     },
     deleteFollowed(user) {
       user.isFollowed = false;
